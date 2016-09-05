@@ -8,6 +8,12 @@ import java.util.Random;
 public class Board {
     private Random random = new Random(System.currentTimeMillis());
 
+    private int score;
+
+    public int getScore() {
+        return score;
+    }
+
     /**
      * represents game squares
      */
@@ -74,6 +80,7 @@ public class Board {
             for (int j = 0; j < 4; j++)
                 squares[i][j] = 0;
         blankSquares = 16;
+        score = 0;
         generateValue();
         generateValue();
     }
@@ -156,6 +163,7 @@ public class Board {
                 squares[i][Math.abs(j)]++;
                 squares[i][Math.abs(k)] = 0;
                 blankSquares++;
+                score += (1 << squares[i][Math.abs(j)]);
                 changed = true;
             }
         }
@@ -192,6 +200,7 @@ public class Board {
                 squares[Math.abs(j)][i]++;
                 squares[Math.abs(k)][i] = 0;
                 blankSquares++;
+                score += (1 << squares[Math.abs(j)][i]);
                 changed = true;
             }
         }

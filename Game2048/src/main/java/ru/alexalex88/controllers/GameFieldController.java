@@ -86,12 +86,12 @@ public class GameFieldController {
         squareList.add(new Square("512", "-fx-text-fill: #f9f6f2; -fx-background-color: #edc850;"));
         squareList.add(new Square("1024", "-fx-text-fill: #f9f6f2; -fx-background-color: #edc53f;"));
         squareList.add(new Square("2048", "-fx-text-fill: #f9f6f2; -fx-background-color: #edc22e;"));
-        squareList.add(new Square("4096", "-fx-text-fill: #f9f6f2; -fx-background-color: #3c3a32;"));
-        squareList.add(new Square("8192", "-fx-text-fill: #f9f6f2; -fx-background-color: #3c3a32;"));
-        squareList.add(new Square("16384", "-fx-text-fill: #f9f6f2; -fx-background-color: #3c3a32;"));
-        squareList.add(new Square("32768", "-fx-text-fill: #f9f6f2; -fx-background-color: #3c3a32;"));
-        squareList.add(new Square("65536", "-fx-text-fill: #f9f6f2; -fx-background-color: #3c3a32;"));
-        squareList.add(new Square("131072", "-fx-text-fill: #f9f6f2; -fx-background-color: #3c3a32;"));
+        squareList.add(new Square("4096", "-fx-text-fill: #f9f6f2; -fx-background-color: #ff4444;"));
+        squareList.add(new Square("8192", "-fx-text-fill: #f9f6f2; -fx-background-color: #ff4444;"));
+        squareList.add(new Square("16384", "-fx-text-fill: #f9f6f2; -fx-background-color: #ff4444;"));
+        squareList.add(new Square("32768", "-fx-text-fill: #f9f6f2; -fx-background-color: #ff4444;"));
+        squareList.add(new Square("65536", "-fx-text-fill: #f9f6f2; -fx-background-color: #ff4444;"));
+        squareList.add(new Square("131072", "-fx-text-fill: #f9f6f2; -fx-background-color: #ff4444;"));
     }
 
     public void drawBoard(int[][] board){
