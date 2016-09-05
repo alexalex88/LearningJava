@@ -20,16 +20,15 @@ public class Main extends Application {
         String fxmlFile = "/GameField.fxml";
         FXMLLoader loader = new FXMLLoader();
         Parent root = loader.load(getClass().getResourceAsStream(fxmlFile));
-
-        gameFieldController = loader.getController();
-        gameFieldController.setBoard(board);
-        gameFieldController.drawBoard(board.getSquares());
-
         primaryStage.setTitle("2048");
         Scene scene = new Scene(root, 600, 600);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         scene.getStylesheets().add((getClass().getResource("/css/GameTheme.css")).toExternalForm());
+        gameFieldController = loader.getController();
+        gameFieldController.setBoard(board);
+        gameFieldController.setStage(primaryStage);
+        gameFieldController.drawBoard(board.getSquares());
         primaryStage.show();
         root.requestFocus();
     }

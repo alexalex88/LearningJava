@@ -3,6 +3,7 @@ package ru.alexalex88.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
 import ru.alexalex88.models.Board;
 
 import java.util.ArrayList;
@@ -10,6 +11,12 @@ import java.util.List;
 
 public class GameFieldController {
     private Board board;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    private Stage stage;
 
     @FXML
     private Label label00;
@@ -74,7 +81,7 @@ public class GameFieldController {
         labels[3][3] = label33;
 
         squareList = new ArrayList<>();
-        squareList.add(new Square("", "-fx-text-fill: #776e65; -fx-background-color: #eee4da;"));
+        squareList.add(new Square("", "-fx-text-fill: #776e65; -fx-background-color: #aaa5a0;"));
         squareList.add(new Square("2", "-fx-text-fill: #776e65; -fx-background-color: #eee4da;"));
         squareList.add(new Square("4", "-fx-text-fill: #776e65; -fx-background-color: #ede0c8;"));
         squareList.add(new Square("8", "-fx-text-fill: #f9f6f2; -fx-background-color: #f2b179;"));
@@ -100,6 +107,7 @@ public class GameFieldController {
                 labels[i][j].setText(squareList.get(board[i][j]).getText());
                 labels[i][j].setStyle(squareList.get(board[i][j]).getStyle());
             }
+        stage.setTitle("2048      Your score : " + this.board.getScore());
     }
 
     public void keyPressed(KeyEvent keyEvent) {
