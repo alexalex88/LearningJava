@@ -29,22 +29,38 @@ public class Board {
     /**
      * try to swipe squares right
      */
-    public void swipeRight(){;}
+    public void swipeRight(){
+        for(int i = 0; i < 4; i++)
+            swipeRow(i, true);
+        generateValue();
+    }
 
     /**
      * try to swipe squares left
      */
-    public void swipeLeft(){;}
+    public void swipeLeft(){
+        for(int i = 0; i < 4; i++)
+            swipeRow(i, false);
+        generateValue();
+    }
 
     /**
      * try to swipe squares up
      */
-    public void swipeUp(){;}
+    public void swipeUp(){
+        for(int i = 0; i < 4; i++)
+            swipeColumn(i, true);
+        generateValue();
+    }
 
     /**
      * try to swipe squares down
      */
-    public void swipeDown(){;}
+    public void swipeDown(){
+        for(int i = 0; i < 4; i++)
+            swipeColumn(i, false);
+        generateValue();
+    }
 
     /**
      * start new game
