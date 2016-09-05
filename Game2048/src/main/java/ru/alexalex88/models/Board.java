@@ -1,9 +1,13 @@
 package ru.alexalex88.models;
 
+import java.util.Random;
+
 /**
  * Created by Alex on 05.09.2016.
  */
 public class Board {
+    private Random random = new Random(System.currentTimeMillis());
+
     /**
      * represents game board
      */

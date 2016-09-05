@@ -7,7 +7,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane focusTraversable="true" gridLinesVisible="true" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.alexalex88.controllers.GameFieldController">
+<GridPane focusTraversable="true" gridLinesVisible="true" onKeyPressed="#keyPressed" prefHeight="400.0" prefWidth="400.0"
+          xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.alexalex88.controllers.GameFieldController">
    <columnConstraints>
       <ColumnConstraints percentWidth="25.0" />
       <ColumnConstraints percentWidth="25.0" />
@@ -21,8 +22,7 @@
       <RowConstraints percentHeight="25.0" />
    </rowConstraints>
    <children>
-      <Label fx:id="label00" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="0" GridPane.rowIndex="0" >
+      <Label fx:id="label00" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -31,8 +31,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label01" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="1" GridPane.rowIndex="0" >
+      <Label fx:id="label01" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -41,8 +40,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label02" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="2" GridPane.rowIndex="0" >
+      <Label fx:id="label02" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -51,8 +49,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label03" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="3" GridPane.rowIndex="0" >
+      <Label fx:id="label03" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="0">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -61,8 +58,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label10" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="0" GridPane.rowIndex="1" >
+      <Label fx:id="label10" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -71,8 +67,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label11" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="1" GridPane.rowIndex="1" >
+      <Label fx:id="label11" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -81,8 +76,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label12" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="2" GridPane.rowIndex="1" >
+      <Label fx:id="label12" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -91,8 +85,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label13" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="3" GridPane.rowIndex="1" >
+      <Label fx:id="label13" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -101,8 +94,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label20" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="0" GridPane.rowIndex="2" >
+      <Label fx:id="label20" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -111,8 +103,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label21" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="1" GridPane.rowIndex="2" >
+      <Label fx:id="label21" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -121,8 +112,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label22" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="2" GridPane.rowIndex="2" >
+      <Label fx:id="label22" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -131,8 +121,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label23" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="3" GridPane.rowIndex="2" >
+      <Label fx:id="label23" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -141,8 +130,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label30" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="0" GridPane.rowIndex="3" >
+      <Label fx:id="label30" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -151,8 +139,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label31" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="1" GridPane.rowIndex="3" >
+      <Label fx:id="label31" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -161,8 +148,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label32" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="2" GridPane.rowIndex="3" >
+      <Label fx:id="label32" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
@@ -171,8 +157,7 @@
          </font>
       </Label>
 
-      <Label fx:id="label33" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER"
-             GridPane.columnIndex="3" GridPane.rowIndex="3" >
+      <Label fx:id="label33" alignment="CENTER" prefHeight="150.0" prefWidth="150.0" text="2048" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
