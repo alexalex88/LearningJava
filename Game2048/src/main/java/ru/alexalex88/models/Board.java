@@ -80,10 +80,14 @@ public class Board {
 
     /**
      * check if game is over
-     * @return true if game is over, false if game is on
+     * @return 1 - game won, -1 - game lost, 0 - game on
      */
-    public boolean gameState(){
-        return blankSquares > 0 || hasMove();
+    public int gameState(){
+        int max = 0;
+        for(int i[] : squares)
+            for(int j : i)
+                if (j > max) max = j;
+        return (max == 11) ? 1 : (blankSquares > 0 || hasMove()) ? 0 : -1;
     }
 
     /**
@@ -116,6 +120,12 @@ public class Board {
      * @return true if squares can be swiped, false otherwise
      */
     private boolean hasMove(){
+        for(int i = 0; i < 4; i++)
+            for(int j = 0; j < 3; j++)
+                if(squares[i][j] != 0 && squares[i][j] == squares[i][j + 1]) return true;
+        for(int i = 0; i < 3; i++)
+            for(int j = 0; j < 4; j++)
+                if(squares[i][j] != 0 && squares[i][j] == squares[i + 1][j]) return true;
         return false;
     }
 
