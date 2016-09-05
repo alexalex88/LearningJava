@@ -80,14 +80,11 @@ public class Board {
 
     /**
      * check if game is over
-     * @return 1 - game won, -1 - game lost, 0 - game on
+     * @return true - game over, false - game on
      */
-    public int gameState(){
-        int max = 0;
-        for(int i[] : squares)
-            for(int j : i)
-                if (j > max) max = j;
-        return (max == 11) ? 1 : (blankSquares > 0 || hasMove()) ? 0 : -1;
+    public boolean isGameOver(){
+
+        return (blankSquares > 0 || hasMove()) ? false : true;
     }
 
     /**
@@ -97,7 +94,7 @@ public class Board {
      */
     private void generateValue(){
         if(blankSquares == 0) return;
-        double p = 0.8;
+        double p = 0.9;
         int n = random.nextInt(blankSquares);
         int zerosCount = 0;
 

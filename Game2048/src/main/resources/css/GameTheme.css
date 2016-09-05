@@ -1,5 +1,5 @@
 .root {
-    -fx-background-color: #121250;
+    -fx-background-color: #040430;
 }
 
 .label {
@@ -8,4 +8,5 @@
     -fx-font-family: Verdana;
     -fx-background-insets: 8px;
     -fx-background-radius: 8px;
+    -fx-background-color: #999911;
 }

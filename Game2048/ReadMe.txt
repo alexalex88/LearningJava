@@ -2,4 +2,4 @@ Game 2048
 
 =========================
 
-Maven, JavaFX, MVC
+Maven, JavaFX, MVC, CSS
