@@ -135,6 +135,11 @@ public class Board {
 
     /**
      * swipe specified row
+     * we move from the edge square into pointed direction
+     * in every square we check if it is 0 and if true we look the row further trying to find non zero value and swap them
+     * if row contains only zero values than row is swiped
+     * after swapping squares we look the row further, if next non zero value is the same to value in current square than we merge this squares
+     * moving to the next square in the row
      * @param i - number of swiped row
      * @param right - swipe direction, true - right, false - left
      * @return true - row was changed, false - wasn't changed
@@ -145,6 +150,7 @@ public class Board {
 
         for (int j = 0 + dirRight; j < 3 + dirRight ; j++){
             int k = j + 1;
+
             if (squares[i][Math.abs(j)] == 0) {
                 while ((k < 3 + dirRight) && (squares[i][Math.abs(k)] == 0)) k++;
                 if (squares[i][Math.abs(k)] != 0) {
@@ -172,6 +178,11 @@ public class Board {
 
     /**
      * swipe specified column
+     * we move from the edge square into pointed direction
+     * in every square we check if it is 0 and if true we look the column further trying to find non zero value and swap them
+     * if column contains only zero values than column is swiped
+     * after swapping squares we look the column further, if next non zero value is the same to value in current square than we merge this squares
+     * moving to the next square in the column
      * @param i - number of swiped column
      * @param up - swipe direction, true - up, false - down
      * @return true - column was changed, false - wasn't changed
