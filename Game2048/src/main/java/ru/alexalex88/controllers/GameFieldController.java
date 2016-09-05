@@ -72,7 +72,8 @@ public class GameFieldController {
     public void drawBoard(int[][] board){
         for (int i = 0; i < 4; i++)
             for (int j = 0; j < 4; j++)
-                labels[i][j].setText(Integer.valueOf(board[i][j]).toString());
+                if (board[i][j] == 0) labels[i][j].setText("");
+                else labels[i][j].setText(Integer.valueOf(1 << board[i][j]).toString());
     }
 
     public void keyPressed(KeyEvent keyEvent) {
