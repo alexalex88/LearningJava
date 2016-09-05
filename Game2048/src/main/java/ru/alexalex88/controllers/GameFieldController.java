@@ -79,19 +79,19 @@ public class GameFieldController {
         switch (keyEvent.getCode()){
             case LEFT:
                 board.swipeLeft();
-                drawBoard(board.getBoard());
+                drawBoard(board.getSquares());
                 break;
             case RIGHT:
                 board.swipeRight();
-                drawBoard(board.getBoard());
+                drawBoard(board.getSquares());
                 break;
             case UP:
                 board.swipeUp();
-                drawBoard(board.getBoard());
+                drawBoard(board.getSquares());
                 break;
             case DOWN:
                 board.swipeDown();
-                drawBoard(board.getBoard());
+                drawBoard(board.getSquares());
                 break;
         }
     }

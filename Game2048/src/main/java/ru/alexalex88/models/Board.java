@@ -9,21 +9,21 @@ public class Board {
     private Random random = new Random(System.currentTimeMillis());
 
     /**
-     * represents game board
+     * represents game squares
      */
-    private int[][] board = new int[4][4];
+    private int[][] squares = new int[4][4];
 
     /**
-     * number of blank squares on the board
+     * number of blank squares on the squares
      */
     private int blankSquares;
 
     /**
-     * getter for board
-     * @return return array int[4][4] which contains values on the board
+     * getter for squares
+     * @return return array int[4][4] which contains values on the squares
      */
-    public int[][] getBoard() {
-        return board;
+    public int[][] getSquares() {
+        return squares;
     }
 
     /**
@@ -68,7 +68,7 @@ public class Board {
     public  void newGame(){
         for (int i = 0; i < 4; i++)
             for (int j = 0; j < 4; j++)
-                board[i][j] = 0;
+                squares[i][j] = 0;
         blankSquares = 16;
     }
 
@@ -87,6 +87,21 @@ public class Board {
      */
     private void generateValue(){
         double p = 0.8;
+        int n = random.nextInt(blankSquares);
+        int zerosCount = 0;
+
+        for (int i = 0; i < 4; i++)
+            for (int j = 0; j < 4; j++)
+                if(squares[i][j] == 0){
+                    if(n == zerosCount) {
+                        squares[i][j] = (random.nextDouble() < p) ? 2 : 4;
+                        blankSquares--;
+                        return;
+                    }
+                    else {
+                        zerosCount++;
+                    }
+                }
     }
 
     /**
