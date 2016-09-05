@@ -23,11 +23,13 @@ public class Main extends Application {
 
         gameFieldController = loader.getController();
         gameFieldController.setBoard(board);
+        gameFieldController.drawBoard(board.getSquares());
 
         primaryStage.setTitle("2048");
         Scene scene = new Scene(root, 600, 600);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
+        scene.getStylesheets().add((getClass().getResource("/css/GameTheme.css")).toExternalForm());
         primaryStage.show();
         root.requestFocus();
     }

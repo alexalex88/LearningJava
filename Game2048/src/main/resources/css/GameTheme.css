@@ -1,0 +1,11 @@
+.root {
+    -fx-background-color: #121250;
+}
+
+.label {
+    -fx-font-size: 32pt;
+    -fx-font-weight: bold;
+    -fx-font-family: Verdana;
+    -fx-background-insets: 8px;
+    -fx-background-radius: 8px;
+}
