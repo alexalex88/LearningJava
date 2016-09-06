@@ -1,7 +1,7 @@
 package ru.alexalex88.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import ru.alexalex88.models.Board;
@@ -128,6 +128,15 @@ public class GameFieldController {
                 board.swipeDown();
                 drawBoard(board.getSquares());
                 break;
+        }
+        if(board.isGameOver()){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("GAME OVER");
+            alert.setHeaderText(null);
+            alert.setContentText("Your score : " + board.getScore());
+            alert.showAndWait();
+            board.newGame();
+            drawBoard(board.getSquares());
         }
     }
 

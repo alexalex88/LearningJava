@@ -90,7 +90,7 @@ public class Board {
      * @return true - game over, false - game on
      */
     public boolean isGameOver(){
-
+        //if (score>20) return true;
         return (blankSquares > 0 || hasMove()) ? false : true;
     }
 
